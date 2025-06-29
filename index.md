@@ -2,85 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Payment Success</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Payment Confirmation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html, body {
+    @import url('https://fonts.cdnfonts.com/css/retro-computer-personal-use');
+  
+
+    body {
+      font-family: 'Retro Computer', monospace, monospace;
+      background: white;
       margin: 0;
       padding: 0;
-      background-color: #000;
-      height: 100%;
-      font-family: Arial, sans-serif;
-      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       overflow: hidden;
-    }
-
-    .message {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 1.6rem;
       text-align: center;
-      font-weight: bold;
-      z-index: 1;
-      max-width: 90%;
+      padding: 0 1rem;
     }
 
-    #particles-js {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
+    .container {
+      max-width: 640px;
+      user-select: none;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      position: relative;
+      color: black;
+      letter-spacing: 0.15em;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      animation: glitch 1.5s infinite;
+    }
+
+    p {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      line-height: 1.4;
+      color: black;
+      max-width: 90%;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+    }
+
+    
+    @keyframes glitch {
+      0% {
+        text-shadow: 2px 0 red, -2px 0 blue;
+      }
+      20% {
+        text-shadow: -2px -2px red, 2px 2px blue;
+      }
+      40% {
+        text-shadow: 2px 2px red, -2px -2px blue;
+      }
+      60% {
+        text-shadow: -2px 2px red, 2px -2px blue;
+      }
+      80% {
+        text-shadow: 2px -2px red, -2px 2px blue;
+      }
+      100% {
+        text-shadow: 2px 0 red, -2px 0 blue;
+      }
+    }
+
+     
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="message">
-    Thank you for your payment!<br>
-    You will receive your premium key shortly at the Gmail address linked to your PayPal account.
+  <div class="container">
+    <h1>Thank You For Your Payment!</h1>
+    <p>You will receive your premium key shortly at the Gmail address linked to your PayPal account.</p>
   </div>
-
-  <div id="particles-js"></div>
-
-  <!-- Particle.js Script -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS("particles-js", {
-      "particles": {
-        "number": {
-          "value": 60,
-          "density": { "enable": true, "value_area": 800 }
-        },
-        "color": { "value": "#ffffff" },
-        "shape": { "type": "circle" },
-        "opacity": {
-          "value": 0.5,
-          "random": true
-        },
-        "size": {
-          "value": 3,
-          "random": true
-        },
-        "move": {
-          "enable": true,
-          "speed": 1,
-          "direction": "none",
-          "random": false,
-          "out_mode": "out"
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": { "enable": true, "mode": "repulse" }
-        },
-        "modes": {
-          "repulse": { "distance": 80 }
-        }
-      },
-      "retina_detect": true
-    });
-  </script>
 </body>
 </html>
+
