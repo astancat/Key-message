@@ -7,25 +7,23 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.cdnfonts.com/css/retro-computer-personal-use');
-  
 
     body {
       font-family: 'Retro Computer', monospace, monospace;
       background: white;
       margin: 0;
-      padding: 0;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
       overflow: hidden;
       text-align: center;
-      padding: 0 1rem;
     }
 
     .container {
       max-width: 640px;
       user-select: none;
+      padding: 0 1rem; /* Moved here */
     }
 
     h1 {
@@ -51,29 +49,15 @@
       font-family: Arial, sans-serif;
     }
 
-    
     @keyframes glitch {
-      0% {
-        text-shadow: 2px 0 red, -2px 0 blue;
-      }
-      20% {
-        text-shadow: -2px -2px red, 2px 2px blue;
-      }
-      40% {
-        text-shadow: 2px 2px red, -2px -2px blue;
-      }
-      60% {
-        text-shadow: -2px 2px red, 2px -2px blue;
-      }
-      80% {
-        text-shadow: 2px -2px red, -2px 2px blue;
-      }
-      100% {
-        text-shadow: 2px 0 red, -2px 0 blue;
-      }
+      0%   { text-shadow: 2px 0 red, -2px 0 blue; }
+      20%  { text-shadow: -2px -2px red, 2px 2px blue; }
+      40%  { text-shadow: 2px 2px red, -2px -2px blue; }
+      60%  { text-shadow: -2px 2px red, 2px -2px blue; }
+      80%  { text-shadow: 2px -2px red, -2px 2px blue; }
+      100% { text-shadow: 2px 0 red, -2px 0 blue; }
     }
 
-     
     @media (max-width: 480px) {
       h1 {
         font-size: 2rem;
@@ -91,4 +75,3 @@
   </div>
 </body>
 </html>
-
