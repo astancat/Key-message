@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment Success</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .message {
+      max-width: 90%;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="message">
+    Your payment was successful.<br>
+    We will send the key on your Gmail Address.<br>
+    This may take a longer.
+  </div>
+</body>
+</html>
